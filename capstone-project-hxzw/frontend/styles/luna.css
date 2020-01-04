@@ -1,0 +1,227 @@
+:root {
+    --reddit-blue: rgb(0, 127, 211);
+    --reddit-orange: #FF5700;
+    --reddit-grey: rgba(0, 0, 0, 0.0975);
+    --reddit-light-grey:  rgba(0, 0, 0, 0.041);
+    --reddit-bg-color: #f1f1f7;
+    --reddit-white:white;
+    --reddit-light-white:rgba(255,255,255,0.5);
+    --body-text-size: 12px;
+    --alt-text-color:  rgba(0, 0, 0, 0.65);
+    --reddit-apple:#a07c87;
+    --reddit-login_window:white;
+    --cyan-blue: rgba(137,191,185);
+    --background_1:rgba(237,185,72);
+  }
+  
+/*   https://www.jianshu.com/p/792bd6fbea7a */
+  .web_bg{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+ /*    min-width: 1000px; */
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+     -webkit-background-size: cover;
+    -o-background-size: cover; 
+    background-position: center 0;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    background-color: var(--reddit-light-white);
+    top:0px;
+    z-index:9999;
+  }
+
+
+  .nav {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #logo {
+    color: white;
+    font-size: var(--body-text-size);
+    width: 60px;
+    height: 60px;
+    left: 1000px;
+    background-color: #ef8201;
+    border-radius: 50%;
+    margin-left: 50px;  /*logo 靠左边的距离*/
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    border: 1px solid var(--reddit-blue);
+    border-radius: 4px;
+    padding: 7.5px 15px;
+    font-weight: bold;
+    height:100px;
+  }
+
+
+  .Sign_out_css{
+    position: absolute;
+    right: 130px;
+  }
+
+  /* 下拉框 */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    color: var(--reddit-blue);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-right:100px;
+    border-radius: 4px;
+    padding: 7.5px 15px;
+    border: 1px solid var(--reddit-blue);
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: none;
+
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: var(--reddit-blue);
+    color:white;
+  }
+
+  /* 下拉框 -- END */
+
+.loginCon{ 
+    position: absolute;  /* reletive ????*/
+    width:360px;
+    height:380px;
+    border-radius: 5%;
+  /*   background-color:rgba(255,255,255,0.5); */
+/*     background-color: var(--reddit-login_window); */
+    right:20%;
+    top:27%;
+} 
+
+.loginCon_2{ 
+  position: absolute;  /* reletive ????*/
+  width:360px;
+  height:460px;
+  border-radius: 5%;
+/*   background-color:rgba(255,255,255,0.5); */
+/*   background-color: var(--reddit-login_window); */
+  right:20%;
+  top:20%;
+} 
+
+#Log_in_menu{
+    width:70%; 
+    cursor:pointer; 
+    position:absolute; 
+    padding-left:35%;
+    top:10%; 
+    font-size:40px;
+    color: var(--background_1);
+  }
+
+
+
+.inner_name_input{
+    width: 70%;
+    padding: 5px 18px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid var(--reddit-grey);
+    font-size: 20px;
+}
+
+.login_line{
+    width:100%;
+    height:20%;
+/*     background-color: var(--reddit-white); */
+    margin-top:10%;
+}
+
+.icon_user{
+    font-size:24px;
+    margin-left:10%;
+    color:gray;
+}
+
+#log_in_input{
+    
+    height:40%;
+    width:100%;
+    margin-top:35%;
+}
+
+.login_diff{
+    height: 40%;
+    width:80%;
+    margin-top:10%;
+    margin-left:10%;
+}
+
+.signup_menu_click{
+    height: 30%;
+    width:60%;
+    margin-left:20%;
+    color:var(--background_1);
+    font-size:24px;
+    text-align: center;
+}
+
+.login_menu{
+    height:50%;
+    background-color:var(--background_1) ;
+    width:35%;
+    float:left;
+    margin-left:12%;
+    font-size:20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor:pointer; 
+/*     text-transform: uppercase; */
+    display: "flex";
+    border-radius: 5px;
+    padding-top:4%;
+}

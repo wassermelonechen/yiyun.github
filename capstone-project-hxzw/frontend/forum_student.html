@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to experience Tutor-Student chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/luna.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/help-tip.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/forum_student.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!--     <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+ -->
+
+</head>
+
+<body >
+    <div id=root bgcolor = "#FF5700">
+        <!-- This root is for student interface -->
+        <!-- header == main_1/main_2/main_3 == footer-->
+        <header class='banner' id="nav" >
+            <h1 id="logo" class="flex-center">HXZW</h1>
+                       
+            <div class="dropdown">
+                <button class="dropbtn "  id="user_window" ></button>
+                <div class="dropdown-content">
+                  <a href="chatbot.html">chat bot</a>
+                  <a href="forum_student.html">forum & profile</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="dropbtn Sign_out_css" id="Sign_out" >Log out</a>
+         
+
+            <div class="help-tip "><i class="fas fa-info-circle"></i>
+                <p> Welcome to use [tutor-student] chatbot 😊<br>  
+                    <br> 1. [Home]: all posts related to the course you choosen.
+                    <br> 2. [Tags]: you can search specific forums in this area.
+                    <br> 3. [Announcements]: you can get course announcements in this area.
+                    <br> 4. [Consultations]: you can get consultation tables in this area.
+                    <br>
+                    <br> 5. [Profile]: you can get personal information in this area.
+                    <br> 6. [Your questions]: the forums you post can be find in this area.
+                    <br> 7. [Your answers]: the forums you commented can be find in this area.
+                    <br> 8. [Setting]: you can reset your personal information here.
+                </p>
+             </div>
+        </header>
+        
+        <main role='main' id="main"> 
+            <div class = forum_box id = forum_box>
+                <ul>
+                <li><a class="active" id="personal_name" href="#Menu">Menu</a></li>
+                <li> <a href="#home" id="my_home" onclick=location.reload()><i class="fas fa-home forum_icon"></i>Home</a></li>
+                <li><a href="#Tags" id="forum_tags" onclick= forum_tag()> <i class="fas fa-tags forum_icon"></i>Tags <div id= "my_post_inner"> </div> </a> </li>
+                <li><a href="#Announcements" id = "forum_announcements" onclick=forum_announcement()><i class="fas fa-bullhorn forum_icon"></i>Announcements</a></li>
+                <li><a href="#Consultations" id = "forum_consultations" onclick=forum_consultation()><i class="fas fa-chalkboard-teacher forum_icon"></i></i>Consultations</a></li>
+                
+                <li><a class="active" id="personal_name" href="#student">Dashboard</a></li>
+                <li> <a href="#profile" id="my_profile"  onclick=forum_profile()><i class="far fa-question-circle forum_icon"></i>Profile</a></li>
+                <li> <a href="#questions" id="my_questions" onclick = your_question()><i class="fas fa-user-alt forum_icon"></i>Your questions</a></li>
+                <li> <a href="#answers" id="my_answers" onclick=your_answer()><i class="fas fa-comments forum_icon"></i>Your answers</a></li>
+                <li> <a href="#setting" id="my_setting" onclick="setting_info()"><i class="fas fa-cog forum_icon"></i>Setting</a></li>
+                </ul>
+         
+                <div class="container" id = container>
+
+                    <div class="forum_top" id = forum_top>Top questions</div>
+                    <div class = forum_filter id = forum_filter>
+                        <div class = "forum_choose forum_choose_1"  id = forum_newest onclick=forum_newest()>NEWEST</div>
+                        <div class = "forum_choose forum_choose_2" id = forum_vote onclick=forum_MostVote()> <i class="fas fa-sort-amount-down"></i>&nbsp;VOTES</div>
+                        <div class = "forum_choose forum_choose_3" id = forum_no_answers onclick=forum_LessAnswers()><i class="fas fa-sort-amount-up"></i>&nbsp;COMMENTS</div>
+                        <div class = "forum_choose forum_choose_3" id = forum_answered onclick=forum_MoreAnswers()><i class="fas fa-sort-amount-down"></i>&nbsp;COMMENTS</div>
+
+                        <div class="dropdown_2 forum_choose forum_choose_1">
+                            <div class="dropbtn_2  "  id="class_choose" >FILTER</div>
+                                <div class="dropdown-content_2" id = xixixi>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="all_forum" id = all_forum>
+                    </div>
+                    <div class=comment_area id=comment_area >Comments<b>
+                    <button class=send_message id = send_message> Send</button>
+                            <textarea rows="20" cols="50" class="talk_word" id="talkwords_2"></textarea>
+                         <!--  <input id="name" name="name" type="text" /> -->
+                    </div>
+
+                </div>
+                
+            </div>
+
+
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <script src="src/forum_student.js"></script>
+    <script src="src/student.js"></script>
+</body>
+
+
+
+
+</html>

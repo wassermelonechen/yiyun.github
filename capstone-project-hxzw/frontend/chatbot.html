@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to experience Tutor-Student chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/luna.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/help-tip.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/chatbot.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/update_file.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+</head>
+
+<body >
+        <div id=root bgcolor = "#FF5700">
+            <!-- This root is for student interface -->
+            <!-- header == main_1/main_2/main_3 == footer-->
+            <header class='banner' id="nav" >
+                <h1 id="logo" class="flex-center"  >HXZW</h1>
+                           
+                <div class="dropdown">
+                    <button class="dropbtn "  id="user_window" ></button>
+                    <div class="dropdown-content">
+                      <a href="chatbot.html">chat bot</a>
+                      <a href="forum_student.html">forum & profile</a>
+                    </div>
+                </div>
+    
+                <a href="index.html" class="dropbtn Sign_out_css" id="Sign_out" >Log out</a>
+             
+    
+                <div class="help-tip "><i class="fas fa-info-circle"></i>
+                    <p> Welcome to use [tutor-student] chatbot 😊<br>  
+                    <br> 1. <i class="fas fa-redo-alt" style="color:var(--backend_1)" ></i>: Generate a shortcut bar.
+                    <br> 2. [ASK]: Questions cannot be solved by the chatbot will be sended to the forum by click this button
+                    <br> 3. [Advance Model]: Enter professional mode by selecting a course in advance area.
+                    <br> 4. Ask me some normal questions in the input box.
+                    <br> 5. [Reminders / Class]: some useful shortcuts
+                    <br> 6. In 'name' button, you can switch pages
+                    </p> 
+                 </div>
+            </header>
+            
+            <main role='main' id="main">
+                    <div class="Wrap">
+                            <div class="talk_con" id="talk_con_id">
+                                <!-- 对话框 -->
+                                <div class="talk_show" id="words">
+                                    
+                                    <div class = "chatbot_logo" id =chatbot_logo>
+                                        <i class="fas fa-robot chatbot_logo_sp"></i> 
+                                    </div>
+
+                                    <div class=" atalk "><span id="asay">Hi, welcome! you can try to <br> 1.Enter professional mode by selecting a course.[ Advance Model ] <br> 2. Ask me some normal questions in the input box. <br> 3. Try other operation[Reminders / Class ]</span></div>
+                                <div class=ask_out_side id="ask_out_side"> 
+                                    <div class=" atalk ask_sp"><span_blue id="asay" >
+                                        <i class="far fa-bell reminders_logo "></i>
+                                        <div class="reminders_intro"> Reminders </div>
+                                        <div class = "button  flex-center atalk_special" id="upcoming_1" onclick="upcoming_1_try()" > <i class="fas fa-bell"></i>
+                                            &nbsp; Add Reminder </div>
+                                        <div class = "button  flex-center atalk_special" id="upcoming" onclick="upcoming_try()" > <i class="fas fa-list-alt"></i>
+                                            &nbsp; Check Upcoming</div>
+
+                                    </div>
+
+                                    <div class=" atalk ask_sp"><span_2 id="asay" >
+                                            <i class="fas fa-graduation-cap reminders_logo"></i>
+                                        <div class="reminders_intro"> Class</div>
+                                        <div class = "button  flex-center atalk_special" id="Booking_consultation_1" onclick="Booking_consultation_1_try()"> <i class="fas fa-university"></i>
+                                            &nbsp;&nbsp; Course website &nbsp; </div>
+                                        <div class = "button  flex-center atalk_special" id="Booking_consultation" onclick="Booking_consultation_try()"><i class="fas fa-hourglass-half"></i>
+                                            &nbsp; &nbsp;+ Consultation &nbsp;</div>
+
+                                    </div>
+
+                                    <div class=" atalk ask_sp"><span id="asay" >
+                                            <i class="fas fa-comment-dots reminders_logo"></i>
+                                            <div class="reminders_intro"> Advance </div>
+                                            <div class = "button  flex-center atalk_special" id="course_related_9900" onclick="course_9900()">&nbsp;&nbsp;<i class="fas fa-headset"></i>
+                                                &nbsp; &nbsp; COMP9900 &nbsp;&nbsp;&nbsp;</div>
+                                            
+                                            <div class = "button  flex-center atalk_special" id="course_related_9444" onclick="course_9444()">&nbsp;&nbsp;<i class="fas fa-headset"></i>
+                                                &nbsp; &nbsp; COMP9444 &nbsp;&nbsp;&nbsp;</div>
+                                    </div>
+
+                                </div>
+                                </div>
+            
+                                <!-- 回复框 + size + voice + 发送-->
+                                <div class="talk_input"  id="talk_input_id">
+                                    <textarea rows="50" cols="3" class="talk_word" id="talkwords" onkeypress="InputPress()"></textarea>
+                                    <!-- <button type="button" class="talk_sub voice" id="voice_text">Voice</button> -->
+                                    <div class = voice_outside > 
+                                        <i class="fas fa-microphone voice_input" id="voice_text"></i>    
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                    <p class="hints"></p>
+                    <i class="fas fa-redo-alt ask_menu"  id="ask_menu"></i>
+                    <div class=" askQuestion_menu"  id="ask_question" onclick=ask2forum()>ASK</div>
+                    <i id = ttsText></i>
+
+                    <div id="bdtts_div_id">
+                            <audio id="tts_autio_id" autoplay="autoplay">
+                                <source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&spd=9&text=播报内容" type="audio/mpeg">
+                                <embed id="tts_embed_id" height="0" width="0" src="">
+                            </audio>
+                        </div>
+                </main>
+           
+        </div>
+    
+        <script src="src/chatbot.js"></script>
+    </body>
+
+
+
+
+</html>

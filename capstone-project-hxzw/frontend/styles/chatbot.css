@@ -1,0 +1,354 @@
+@media screen and (min-width: 320px) and (max-width: 1156px){
+    .talk_con_mob{
+        width:600px;
+        height:500px;
+        border:1px solid #666;
+        margin:50px auto 0;
+        background:#f9f9f9;
+    }
+    .talk_show_mob{
+        width:580px;
+        height:420px;
+        border:1px solid #666;
+        background:#fff;
+        margin:10px auto 0;
+        overflow:auto;
+    }
+    .talk_input_mob{
+        width:580px;
+        margin:10px auto 0;
+    }
+    .talk_word_mob{
+        width:420px;
+        height:26px;
+        padding:0px;
+        float:left;
+        margin-left:10px;
+        outline:none;
+        text-indent:10px;
+    }  
+}
+
+.talk_con{    /*  对话框 外框   */
+    width:48%;
+    height:45vw;
+    border:1px solid var(--background_1);
+    margin:5px 50px 0px 0px;
+    margin-left:25%;
+    /* background:#f9f9f9;  */
+    background:var(--reddit-light-white);
+    float:left;
+    position:absolute;
+    border-radius: 6%;
+
+    
+}
+
+.talk_show{   /*  对话框 展现   */
+    width:91%;
+    height:30vw;
+   /*  border:1px solid #666; */
+    background:#fff;
+    margin:4%;
+    overflow:auto;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius: 15px;
+    
+}
+.talk_input{     /* 回复框 + 按钮 */
+    width:94%;
+    margin:10px auto 0;
+}
+.whotalk{
+    width:80px;
+    height:30px;
+    float:left;
+    outline:none;
+}
+.talk_word{   /*   输入框    */ 
+    width:85%;
+    height:8vw;
+    padding:0px;
+    float:left;
+    margin-left:1%;
+    outline:none;
+    text-indent:10px;
+/*     -webkit-border-radius:10px;
+    -moz-border-radius:10px; */
+    border-radius: 6px;
+    border:0px;
+    font-size:20px;   /* 输入框字体的大小 */
+}       
+    
+.talk_sub{
+    width:13%;
+    height:13vw;
+    float:right;
+    background-color:#ffb3a7;
+    font-size: 20px;
+    margin:1px;
+}
+
+.atalk{
+    margin:10px; 
+}
+.atalk span{
+    display:inline-block;
+    background:   rgb(112,159,143);/* #0181cc; */
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+}
+
+.atalk span_blue{
+    display:inline-block;
+    background:   rgb(146,203,237);/* #0181cc; */
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+}
+
+.atalk span_2{
+    display:inline-block;
+    background:   rgb(120,194,196);/* #0181cc; */
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+
+}
+.reminders_intro{
+    color:white;
+    margin-bottom: 3%;
+    width:80%;
+    height:auto;
+    font-size:18px;
+}
+
+.btalk{
+    margin:10px;
+    text-align:right;
+}
+.btalk span{
+    display:inline-block;
+    background:#ef8201;
+    border-radius:10px;
+    color:#fff;
+    padding:5px 10px;
+} 
+
+.wrap{
+    position:relative;
+    width:100%;
+    height:800px;
+    display:flex;
+}
+
+.left {
+    width:65%;
+    height:600px;
+    background:#fba;
+    float:left;
+    position:absolute;
+}
+
+.right {
+    width:30%;
+    height:600px;
+    background:#8ca;
+    float:right;
+    position:absolute;
+    margin-left:70%;
+}
+
+
+.voice {
+    color: white;
+    font-size: var(--body-text-size);
+    width: 10%;
+    height: 60px;
+    background-color:#a07c87;
+    border-radius: 50%;
+
+}
+
+#page{
+    height:700px;
+}
+
+.upcoming_event_outside_css{
+    width: 18%;
+    float: right;
+    min-height: 300px;
+    background-color: #a07c87; /*rgb(216, 211, 138);*/
+    position: absolute;
+    border: 1px solid #666;
+    border-radius: 10%;
+    margin: 10% 0% 0% 75%;
+    font-size:24px;
+    text-align:center;
+    padding: 10px;
+}
+
+.upcoming_event_line_css{
+    background-color:white;
+    font-size:18px;
+    margin:5%;
+    text-align:left;
+}
+
+.reminders_logo{
+    width: 100%;
+    /* color: rgb(146,203,237); */
+    height: 4vw;
+    font-size:300%;
+    text-align:center;
+    margin-top:8%;
+}
+.reminders_blue{
+    color:rgb(146,203,237)
+}
+
+
+
+.ask_menu{
+    background-color: white;
+    color: var(--background_1);
+    font-weight: bold;
+    font-size:250%;
+    height: 3vw;
+    width: 3%;
+    border-radius: 50%;
+    position: absolute;
+    margin: 2% 0% 0% 19%;
+    text-align:center;
+    padding: 12px;
+/*     padding-left:10px;
+    padding-top: 10px; */
+    vertical-align: center;
+/*     border:1px solid #666; */
+
+}
+
+
+
+.askQuestion_menu{
+    background-color: white;
+    color: var(--background_1);
+    font-weight: bold;
+    height: 2vw;
+    width: 2.5%;
+    border-radius: 50%;
+    position: absolute;
+    margin: 8% 0% 0% 19.5%;
+    text-align:center;
+    padding:10px;
+    vertical-align: center;
+    font-size:120%;
+    padding-top: 1%;
+    
+}
+
+
+.chatbot_logo_sp{
+    color:var(--background_1);
+    float:left;
+    width:8%;
+    height: 10%;
+    font-size:200%;
+    padding-left:2%;
+    padding-top:1vw;
+}
+
+.chatbot_logo_sp2{
+    color:var(--background_1);
+    float:left;
+    width:6.5%;
+    height: 10%;
+    font-size:180%;
+    padding-left:1%;
+}
+
+.ask_sp{
+    float:left;
+}
+
+
+.atalk_special{
+    background-color:white;
+    color:var(--reddit-blue);
+    margin-bottom: 3%;
+    width:80%;
+    height:auto;
+    text-transform:center;
+    -webkit-box-shadow:0px 3px 3px #c8c8c8 ;
+    -moz-box-shadow:0px 3px 3px #c8c8c8 ;
+    box-shadow:0px 3px 3px #c8c8c8 ;
+    text-align: center;
+    position:center;
+    font-size:12px;
+}
+
+
+.voice_outside{
+    width: 10%;
+    height: 4.5vw;
+    float:left;
+    margin-top:5%;
+    margin-left:2%;
+    background-color:white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+.voice_input{
+    font-size:250%;
+    color:var(--background_1);
+    margin-top: 20%;
+    
+}
+
+.chatbot_choice_9900{
+    font-size:1000%;
+    margin-top: 6%;
+    color: var(--reddit-light-white);
+    position: absolute;
+}
+
+.chatbot_choice_9444{
+    font-size:1000%;
+    margin-top: 18%;
+    margin-left: 10%;
+    color: var(--reddit-light-white);
+    position: absolute;
+    
+}
+
+.chatbot_choice_9044{
+    font-size:1000%;
+    margin-top: 30%;
+    color: var(--reddit-light-white);
+    position: absolute;
+}
+
+
+.ask_out_side{
+    width: 100%;
+    height: 14vw;
+    /* background-color:red; */
+}
+
+.reminder_input{
+    font-size:16px;
+    height: 10%;
+    width: 90%;
+}
+
+.reminder_input_2{
+    font-size:16px;
+    height: 10%;
+    width: 60%;
+}
+
+

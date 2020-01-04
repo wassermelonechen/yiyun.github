@@ -1,0 +1,93 @@
+CREATE TABLE Users (
+    Id       TEXT,
+    Nickname TEXT,
+    Password TEXT,
+    Token    TEXT,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (Id) REFERENCES Students(Id)
+);
+
+CREATE TABLE Students (
+    Id       TEXT,
+    Name     TEXT,
+    Gender   TEXT,
+    Birthday DATETIME,
+    Email    TEXT,
+    PRIMARY KEY (Id)
+);
+
+CREATE TABLE Courses(
+    Id   TEXT,
+    Name TEXT,
+    Lic  TEXT,
+    PRIMARY KEY (Id)
+);
+
+CREATE TABLE CourseMembers(
+    Course  TEXT,
+    Student TEXT,
+    Type    INTEGER,
+    PRIMARY KEY (Course, Student),
+    FOREIGN KEY (Course)  REFERENCES Courses(Id),
+    FOREIGN KEY (Student) REFERENCES Students(Id)
+);
+
+CREATE TABLE Consultations(
+    Id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    Course  TEXT,
+    Details TEXT,
+    FOREIGN KEY (Course) REFERENCES Courses(Id)
+);
+
+CREATE TABLE Upcoming(
+    Id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    Student TEXT,
+    Time    INTEGER,
+    Details TEXT,
+    FOREIGN KEY (Student) REFERENCES Students(Id)
+);
+
+CREATE TABLE Announcements(
+    Id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    Course  TEXT,
+    Title   TEXT,
+    Details TEXT,
+    Time    INTERGER,
+    FOREIGN KEY (Course) REFERENCES Courses(Id)
+);
+
+CREATE TABLE Posts(
+    Id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    Time    INTERGER,
+    Course  TEXT,
+    Poster  TEXT,
+    Title   TEXT,
+    Details TEXT,
+    Tag     TEXT,
+    FOREIGN KEY (Course) REFERENCES Courses(Id),
+    FOREIGN KEY (Poster) REFERENCES Users(Id)
+);
+
+CREATE TABLE Comments(
+    Id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    Time      INTERGER,
+    Post      INTEGER,
+    Commenter TEXT,
+    Details   TEXT,
+    FOREIGN KEY (Commenter) REFERENCES Users(Id)
+);
+
+CREATE TABLE PostVotes(
+    Post INTEGER,
+    User TEXT,
+    PRIMARY KEY (Post, User),
+    FOREIGN KEY (Post) REFERENCES Posts(Id)
+);
+
+CREATE TABLE CommentVotes(
+    Comment INTEGER,
+    User    TEXT,
+    Flag    INTEGER,
+    PRIMARY KEY (Comment, User),
+    FOREIGN KEY (Comment) REFERENCES Comments(Id)
+);

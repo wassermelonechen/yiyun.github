@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to experience Tutor-Student chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/luna.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/help-tip.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!--     <style>
+            body 
+            {
+                background-image:url('images/login.jpeg') ;
+                background-size: cover;
+                width:100%;
+                height:auto;
+
+            }
+            </style> -->
+</head>
+
+<body >
+    <div id="web_bg" class ="web_bg"  style="background-image: url('images/login.jpeg');"></div>
+    <div id=root bgcolor = "#FF5700">
+        <!-- This root is for student interface -->
+        <!-- header == main_1/main_2/main_3 == footer-->
+        <header class='banner' id="nav" >
+            <h1 id="logo" class="flex-center">HXZW</h1>
+                       
+            <div class="help-tip "><i class="fas fa-info-circle"></i>
+                <p> Welcome to use [tutor-student] chatbot 😊<br>
+                <br> Log in : 
+                <br> 1. Enter z-ID in USERNAME 
+                <br> 2. Enter password in PASSWORD
+                <br> 3. Student: click student to verify user information
+                <br> &nbsp; &nbsp;&nbsp;Tutor: click tutor to verify user information
+                <br> 4. click 'Join us now': [sign up window will appear]
+                <br> 
+                <br> Sign up :
+                <br> 1. Enter z-ID in USERNAME
+                <br> 2. Enter password in PASSWORD
+                <br> 3. Enter nickname in NICKNAME
+                <br> 4. Student: sign up as student
+                <br> &nbsp; &nbsp;&nbsp;Tutor: sign up as tutor
+                <br> 4. click 'Go back to login': [log in window will appear]
+                <br> <br>
+                <br> If you need any more help, you can send your confuse to unswluna@gmail.com
+                
+                </p>
+             </div>
+        </header>
+
+        <main role='main' id="main"> 
+            <div id = inner_box class = loginCon>
+                <div id = Log_in_menu>Log in</div>
+                <div id = log_in_input >
+                    <div class = login_line> 
+                        <i class="fas fa-user icon_user" ></i>
+                        <input id = user_name_input type = "text" class = inner_name_input placeholder = "USERNAME"></input>
+                    </div>
+                    
+                    <div class = login_line> 
+                        <i class="fas fa-unlock-alt icon_user"></i>
+                        <input id = user_password_input  class = inner_name_input type="password" placeholder = "PASSWORD"></input>
+                    </div>
+
+                    <div class = login_diff>
+                        <div class = login_menu id = login_menu onclick = check_login()>Student</div>
+                        <div class = login_menu id = login_menu onclick = check_login_tutor()>Tutor </div>
+                    </div>
+                    <div class = signup_menu_click id = signup_menu_click onclick = "signup_menu()"> Join us now </div>
+                </div>
+            </div  >
+
+            <div id = inner_box_2 class = loginCon_2 style="visibility: hidden;">
+                    <div id = Log_in_menu>Sign up</div>
+                    <div id = log_in_input >
+                        <div class = login_line> 
+                            <i class="fas fa-user icon_user" ></i>
+                            <input id = user_name_input_1 type = "text" class = inner_name_input placeholder = "USERNAME"></input>
+                        </div>
+                        
+                        <div class = login_line> 
+                            <i class="fas fa-unlock-alt icon_user"></i>
+                            <input id = user_password_input_1  class = inner_name_input type="password" placeholder = "PASSWORD"></input>
+                        </div>
+
+                        <div class = login_line> 
+                            <i class="fas fa-unlock-alt icon_user"></i>
+                            <input id = user_nickname_input_1 type = "text" class = inner_name_input placeholder = "NICKNAME"></input>
+                        </div>
+    
+                        <div class = login_diff>
+                            <div class = login_menu id = signup_menu onclick = sign_up()>Student</div>
+                            <div class = login_menu id = signup_menu onclick = sign_up_tutor()>Tutor </div>
+                        </div>
+                        <div class = signup_menu_click id = login_menu_click onclick = "login_menu()"> Go back to login </div>
+                    </div>
+            </div  >
+        </main>
+
+    </div>
+
+
+    <script type="module" src="src/luna_1.js"></script>
+    <script src="src/login.js"></script>
+</body>
+
+
+
+
+</html>

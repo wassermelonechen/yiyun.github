@@ -1,0 +1,7 @@
+sqlite3 luna.sqlite3 < test.schema
+sqlite3 luna.sqlite3 ".headers on" ".mode csv" ".import ./Data/Students.csv Students" ".import ./Data/Users.csv Users" \
+".import ./Data/Courses.csv Courses" ".import ./Data/Announcements.csv Announcements" \
+".import ./Data/CourseMembers.csv CourseMembers" ".import ./Data/Consultations.csv Consultations" \
+".import ./Data/Upcoming.csv Upcoming" ".import ./Data/Posts.csv Posts" \
+".import ./Data/Comments.csv Comments" ".import ./Data/CommentVotes.csv CommentVotes" \
+".import ./Data/PostVotes.csv PostVotes"

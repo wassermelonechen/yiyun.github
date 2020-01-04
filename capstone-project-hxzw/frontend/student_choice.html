@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to experience Tutor-Student chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/luna.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/help-tip.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/student_choice.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body >
+    <div id="web_bg" class ="web_bg"  style="background-image: url('images/bg.jpeg');"></div>
+    <div id=root bgcolor = "#FF5700">
+        <!-- This root is for student interface -->
+        <!-- header == main_1/main_2/main_3 == footer-->
+        <header class='banner' id="nav" >
+            <h1 id="logo" class="flex-center">HXZW</h1>
+                       
+            <div class="dropdown">
+                <button class="dropbtn "  id="user_window" ></button>
+                <div class="dropdown-content">
+                  <a href="chatbot.html">chat bot</a>
+                  <a href="forum_student.html">forum & profile</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="dropbtn Sign_out_css" id="Sign_out" >Log out</a>
+         
+
+            <div class="help-tip "><i class="fas fa-info-circle"></i>
+                <p> Welcome to use [tutor-student] chatbot 😊<br>  
+                <br> 1. Click  <i class="far fa-question-circle" style="color:black" ></i> button, you will be linked in forum page
+                <br> 2. Click  <i class="fas fa-chalkboard-teacher" style="color:var(--cyan-blue)" ></i> button, you will be linked in chatbot page
+                <br> 3. Click 'log out' button , you can log out
+                </p>
+             </div>
+        </header>
+
+        <main role='main' id="main"> 
+
+            <!-- 转换页面 -->
+        <div class="transfer">  
+             <!-- student -->
+            <div class = choice_3>
+                <div class = choice_separate id = forum>
+                        <i class="far fa-question-circle icon_choice_forum" onclick = window.location.href="forum_student.html"></i>
+                        <div class="choice_1" > Forum & Profile</div>
+                </div>
+                <div class = choice_separate id = chatbot>
+                    <i class="fas fa-chalkboard-teacher icon_choice" onclick = window.location.href="chatbot.html"  ></i>
+                    <div class="choice_2" > Chatbot</div>
+                </div>
+            </div>
+
+        </div>
+
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <script src="src/student_choice.js"></script>
+    
+</body>
+
+
+
+
+</html>

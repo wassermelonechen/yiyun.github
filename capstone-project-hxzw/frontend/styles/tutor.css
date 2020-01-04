@@ -1,0 +1,100 @@
+
+.tutor_management{
+    width:60%;
+    height:600px;
+    margin-left:33%;
+    margin-top:5%;
+    position: absolute;
+}
+
+#tutor_management{
+    background-color: red;
+    width:500px;
+    height:200px;
+}
+
+.file_upload_css{
+    background-color: white;
+    width:40%;
+    height:300px;
+    position: absolute;
+    
+}
+
+.management_small_title{
+    font-size:26px;
+    padding:10px 10px 10px 10px;
+    background-color:cadetblue
+}
+
+
+
+
+
+.file_upload_id_css{
+    background-color: white;
+    width:40%;
+    min-height:50px;
+    position: absolute;
+    margin-top:10%;
+    margin-left:30%;
+}
+
+.file_upload_id_css_1{
+    background-color: #a07c87;
+    height:50px;
+    position: relative;
+    font-size:30px;
+    color:white;
+    padding-left:10px;
+}
+
+.tutor_management_2{
+    width:60%;
+    height:600px;
+    margin-left:5%;
+    margin-top:5%;
+    position: absolute;
+}
+
+.file_upload_css{
+    background-color: white;
+    width:40%;
+    height:300px;
+    position: absolute;
+    margin-left:50%;
+}
+
+.annouce_css{
+    background-color: white;
+    width:40%;
+    height:300px;
+    position: absolute;
+}
+
+.management_small_title{
+    font-size:26px;
+    padding:10px 10px 10px 10px;
+    background-color:cadetblue
+}
+
+.input_course{
+    font-size:24px;
+    margin-top:5%;
+    width: 90%;
+    margin-left:5%;
+}
+
+.input_course_2{
+    font-size:30px;
+    margin-top:2%;
+    width: 90%;
+    margin-left:5%;
+}
+
+.tutor_1{
+    float:right;
+    background-color:blue;
+}
+
+
